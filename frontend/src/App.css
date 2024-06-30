@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+}
+
+.background-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ffea2e 1%, #e346ff 100%);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite, dashedBG 15s linear infinite;
+  z-index: -1;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes dashedBG {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.App {
+  text-align: center;
+  z-index: 1;
+}
+
+h1 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.quote-container, .comments-section {
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 600px;
+}
+
+.quote {
+  font-size: 1.5em;
+}
+
+.author {
+  font-size: 1.2em;
+  color: #666;
+}
+
+.button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.thumbs-up-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.thumbs-up {
+  background: none;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.thumbs-up:hover {
+  transform: scale(1.2);
+}
+
+.comments-section {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 600px;
+}
+
+.comments-section h2 {
+  margin-top: 0;
+}
+
+.comments-section input {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.comments-section button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.comments-section button:hover {
+  background-color: #218838;
+}
+
+.comments-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.comments-section li {
+  background: #e9ecef;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
